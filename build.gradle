@@ -1,0 +1,28 @@
+apply plugin: "java"
+
+buildscript {
+    repositories {
+        maven {
+            url uri('https://oss.sonatype.org/content/groups/public')
+        }
+        maven {
+            url uri('http://repo1.maven.org/maven2')
+        }
+    }
+    dependencies {
+        classpath "com.thilko.spring:gradle-springdoc-plugin:0.1.SNAPSHOT"
+    }
+}
+apply plugin: 'springdoc'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework:spring-core:4.0.0.RELEASE'
+    compile 'org.springframework:spring-web:4.0.0.RELEASE'
+    compile 'javax.servlet:servlet-api:3.0-alpha-1'
+    compile 'org.springframework:spring-webmvc:4.0.0.RELEASE'
+    testCompile 'junit:junit:4.11'
+}
