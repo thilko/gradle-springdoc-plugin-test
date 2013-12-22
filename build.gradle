@@ -2,11 +2,11 @@ apply plugin: "java"
 
 buildscript {
     repositories {
-        maven {
-            url uri('https://oss.sonatype.org/content/groups/public')
+        maven{
+            url uri('http://repo1.maven.org/maven2')
         }
         maven {
-            url uri('http://repo1.maven.org/maven2')
+            url uri('https://oss.sonatype.org/content/groups/public')
         }
     }
     dependencies {
@@ -26,3 +26,7 @@ dependencies {
     compile 'org.springframework:spring-webmvc:4.0.0.RELEASE'
     testCompile 'junit:junit:4.11'
 }
+
+
+
+
