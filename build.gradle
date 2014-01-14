@@ -2,17 +2,13 @@ apply plugin: "java"
 
 buildscript {
     repositories {
-        maven{
-            url uri('http://repo1.maven.org/maven2')
-        }
-        maven {
-            url uri('https://oss.sonatype.org/content/groups/public')
-        }
+      mavenCentral()
     }
     dependencies {
-        classpath "com.thilko.spring:gradle-springdoc-plugin:0.1.SNAPSHOT"
+        classpath "com.thilko.spring:gradle-springdoc-plugin:0.1"
     }
 }
+
 apply plugin: 'springdoc'
 
 repositories {
